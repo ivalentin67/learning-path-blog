@@ -1,0 +1,5 @@
+rails console
+BlogPost.all
+BlogPost.create(title: "Titre", body: "text")
+
+localhost:3000

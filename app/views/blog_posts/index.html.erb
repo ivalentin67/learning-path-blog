@@ -1,0 +1,7 @@
+
+<h1> My Blog </h1>
+<%  @blog_posts.each do |blog| %>
+  <h2><%= link_to blog.title, blog %></h2>
+  <!-- blog = blog_post_path(blog.id) -->
+  <!-- Rails trouve tout seul le bon objet à utiliser -->
+<% end %>
