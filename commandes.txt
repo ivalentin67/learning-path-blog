@@ -3,3 +3,5 @@ BlogPost.all
 BlogPost.create(title: "Titre", body: "text")
 
 localhost:3000
+
+BlogPost.last(90).map(&:destroy)

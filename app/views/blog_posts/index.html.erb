@@ -4,6 +4,7 @@
 <%  @blog_posts.each do |blog| %>
   <div>
     <h2><%= link_to blog.title, blog %></h2>
+    <h5><%= blog.content %></h5>
     <% if blog.draft? %>
       <div class = "p-2 rounded bg-gray-100 text-gray-900"> Draft </div>
     <% elsif blog.scheduled? %>
@@ -12,4 +13,9 @@
       </div>
   <!-- blog = blog_post_path(blog.id) -->
   <!-- Rails trouve tout seul le bon objet à utiliser -->
+<% end %>
+
+<%#= console %>
+<% if @pagy.count > @pagy.items %>
+²<%== pagy_nav(@pagy) %>
 <% end %>

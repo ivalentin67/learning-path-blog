@@ -1,5 +1,7 @@
 <h1> <%= @blog_post.title %></h1>
-<h2> <%= @blog_post.body %></h2>
+<h2> <%= @blog_post.content %></h2>
+
+<%= image_tag @blog_post.cover_image if @blog_post.cover_image.present? %>
 <% if user_signed_in? %>
   <%= link_to "Edit", edit_blog_post_path %>
 <% end %>

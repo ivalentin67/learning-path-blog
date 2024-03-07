@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
 
-  resources :blog_posts
+  resources :blog_posts do
+    resource :cover_image, only: [:destroy], module: :blog_posts
+  end
 
   # :{nom} = variable
   # blog_past_path(1) -> "blog_posts/1"
